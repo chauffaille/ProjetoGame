@@ -13,7 +13,39 @@ body{
     font-size: 40px;
     color: white;
     margin-top: 0;
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url('../imgs/castle.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0),rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url('../imgs/castle.png');
+    overflow: hidden;
+}
+
+.chuva{
+    animation: chuva 2s infinite linear;
+    animation-fill-mode: forwards; /* Mantenha o estado final após a última iteração */
+    /* Adicione outros estilos da sua imagem, como largura, posição, etc. */
+
+}
+.chuva2{
+    animation: chuva2 2s infinite linear;
+    animation-fill-mode: forwards; /* Mantenha o estado final após a última iteração */
+    /* Adicione outros estilos da sua imagem, como largura, posição, etc. */
+
+}
+
+@keyframes chuva {
+    0% {
+        transform: translateY(-1000px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes chuva2 {
+    0% {
+        transform: translateY(-1000px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 .banner h1 {
@@ -42,14 +74,12 @@ body{
     margin-left: 50px;
     height: 1600px;
     margin-top: 10px;
-
-
 }
 
 .Titulo{
-  text-align: center;
-  font-family: 'Press Start 2P';
-  font-size: 25px;
+    text-align: center;
+    font-family: 'Press Start 2P';
+    font-size: 25px;
 }
 
 .Paragrafo{
@@ -62,72 +92,116 @@ body{
     width: 190px;
     height: 1600px;
     position: relative;
-    background-color: black;
+    background-color: transparent;
     vertical-align:top;
-    margin-top: 65px;
+    margin-top: -50px;
     
 }
+
+.BtnsLeft{
+    margin-top: -20px;
+}
+.dragon{
+    width: 150px;
+    margin-left: 30px;
+    z-index: 2;
+    position: relative;
+}
+
+.pedestal{
+
+    margin-top: -150px;
+    z-index: 0;
+    position: relative;
+    
+}
+
 .Right-Menu{
     width: 190px;
-    height: 1600px;
+    height: 550px;
     position: relative;
-    background-color: rgb(247, 247, 247);
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), linear-gradient(to left, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0),rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url('../imgs/banner550x190.png');
+    background-color: rgb(0, 0, 0);
+    background-repeat: no-repeat;
     vertical-align:top;
     margin-left: 50px;
+    margin-top: 40px;
+    transition: background-image 0.5s ease-in-out;
+}
+.Right-Menu:hover{
+    width: 190px;
+    height: 550px;
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), linear-gradient(to left, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0),rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url('../imgs/banner550x190.png');
+    background-color: rgb(0, 0, 0);
+    background-repeat: no-repeat;
+    vertical-align:top;
+    margin-left: 50px;
+    margin-top: 40px;
+    transition: background-image 0.5s ease-in-out;
 }
 
 .BtnLeft{
-    width: 190px;
-    height: 50px;
     background-image: url(../imgs/botao1.png);
-    color:white;
-    text-align:center;
+    font-family: 'Press Start 2P';
     margin-bottom: 7px;
     text-decoration: none !important; 
     display: block;
     line-height: 50px;
-    font-size: 20px;
+    font-size: 14px;
     border-radius: 10px;
     transform: scale(1);
     transition: transform 0.2s ease-in-out;
-    
-}
-
-.BtnLeft a{
-    color:rgb(48, 48, 48);
+    position: relative;
     text-align:center;
     text-decoration: none !important;  
-    font-family: 'Press Start 2P';
-    font-size: 14px;
+    color: rgb(51, 51, 51);
 }
 
 .BtnLeft:hover{
-    width: 190px;
-    height: 50px;
-    background-color: #647d34;
+    background-image: url(../imgs/botao1.png);
+    font-family: 'Press Start 2P' !important;
     text-align:center;
     margin-bottom: 7px;
     text-decoration: none !important; 
     display: block;
     line-height: 50px;
-    font-size: 20px;
+    font-size: 15px;
     border-radius: 10px;
     transform: scale(1.05);
 }
 
-.BtnLeft::before{
-    width: 190px;
-    height: 50px;
-    background-color: #647d34;
-    color:white;
+.createAccountBanner{
+    font-family: 'Press Start 2P' !important;
     text-align:center;
-    margin-bottom: 7px;
-    text-decoration: none !important; 
-    display: block;
-    line-height: 50px;
-    font-size: 20px;
-    border-radius: 10px;
-    transform: scale(1.05);
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+    margin-top: 200px;
+    margin-left: 30px;
+    position: absolute;
+    font-size: 19px;
+    text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.8);
 }
 
+.formAccount{
+    position: relative;
+    width: 450px;
+    height: 150px;
+    margin-left: 160px;
+    margin-top: 50px;
+    padding-right: 10px;
+    padding-top: 30px;
+    background-color: gray;
+    background-size:contain;
+    border-radius: 15px;
+    border-color: rgb(78, 78, 78);
+    border-width: 10px;
+    border-style:double;
+}
+
+.formAccount form {
+    position: relative;
+    flex: auto;
+    margin-left: 120px;
+    margin-top: 0px;
+    line-height: 10px;
+    
+}
