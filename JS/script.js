@@ -16,3 +16,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // Verifique a posição periodicamente (a cada 100 milissegundos neste exemplo)
     setInterval(verificarPosicao, 100);
 });
+
+function loadPage(page) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("centerMenu").innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("GET", page, true);
+    xhttp.send();
+}

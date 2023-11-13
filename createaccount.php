@@ -1,3 +1,6 @@
+<?php
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,6 +22,9 @@
 
         <label for="senha">Senha:</label>
         <input type="password" id="senha" name="senha" required><br><br>
+
+        <label for="senha2">Confirmar Senha:</label>
+        <input type="password" id="senha2" name="senha2" required><br><br>
 
         <button type="button" onclick="cadastrar()">Cadastrar</button>
     </form>

@@ -1,3 +1,8 @@
+<?php 
+session_start();
+
+$_SESSION['login'] == null;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
 </head>
+
 <body>
     <div class="banner">
      <h1>Game Navegador</h1>
@@ -22,13 +28,13 @@
             </div>
             <div class="BtnsLeft">
                 <div class="BtnLeft">
-                    <a class="BtnLeft" onclick="loadPage('news.html')">News</a>
+                    <a class="BtnLeft" onclick="loadPage('news.php')">News</a>
                 </div>
             <div class="BtnLeft">
-                <a class="BtnLeft" onclick="loadPage('conta.html')">Conta</a>
+                <a class="BtnLeft" onclick="loadPage('loginpage.php')">Login</a>
             </div>
             <div class="BtnLeft">
-                <a class="BtnLeft" onclick="loadPage('Highscores.html')">Highscores</a>
+                <a class="BtnLeft" onclick="loadPage('Highscores.php')">Highscores</a>
             </div>
         </div>
         </div>
@@ -37,30 +43,30 @@
         </div>
 
         <div class="Right-Menu">
-        <a class="createAccountBanner" onclick="loadPage('createaccount.html')">Create<br>Account</a>
-        </div>
-
-      
+        <a class="createAccountBanner" onclick="loadPage('createaccount.php')">Create<br>Account</a>
+       </div>  
     </div>
 
 </body>
 <script src="JS/script.js"></script>
 <script src="JS/cadastro.js"></script>
 <script>
+    //colocar news.html como pagina incial
     document.addEventListener('DOMContentLoaded', function() {
-        loadPage('news.html');
+        loadPage('news.php');
     });
-
-    function loadPage(page) {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function () {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("centerMenu").innerHTML = this.responseText;
-            }
-        };
-        xhttp.open("GET", page, true);
-        xhttp.send();
+    var login
+    if (login == true) {
+    document.addEventListener('DOMContentLoaded', function() {
+        loadPage('dashboard.php');
+    })}
+    else{
+        document.addEventListener('DOMContentLoaded', function() {
+        loadPage('news.php');
+    })
     }
+
+
 </script>
 </html>
 
