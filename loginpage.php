@@ -1,6 +1,10 @@
 <?php
 session_start();
-
+if (isset($_SESSION['login']) && $_SESSION['login'] == true) {
+    // Se não estiver logado, redirecione para a página de login
+    header('Location: dashboard.php');
+    exit();
+}
    
 ?>
 <!DOCTYPE html>

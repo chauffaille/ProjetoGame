@@ -1,7 +1,5 @@
 <?php 
 session_start();
-
-$_SESSION['login'] == null;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,22 +49,14 @@ $_SESSION['login'] == null;
 <script src="JS/script.js"></script>
 <script src="JS/cadastro.js"></script>
 <script>
-    //colocar news.html como pagina incial
     document.addEventListener('DOMContentLoaded', function() {
-        loadPage('news.php');
+        <?php if(isset($_SESSION['loginnow']) && $_SESSION['loginnow'] == true): ?>
+           <?php $_SESSION['loginnow'] = false; ?>;
+            loadPage('dashboard.php');
+        <?php else: ?>
+            loadPage('news.php');
+        <?php endif; ?>
     });
-    var login
-    if (login == true) {
-    document.addEventListener('DOMContentLoaded', function() {
-        loadPage('dashboard.php');
-    })}
-    else{
-        document.addEventListener('DOMContentLoaded', function() {
-        loadPage('news.php');
-    })
-    }
-
-
 </script>
 </html>
 

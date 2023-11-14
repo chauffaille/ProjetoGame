@@ -18,9 +18,10 @@ if ($result->num_rows > 0) {
         // Adicionar redirecionamento para a página de perfil, dashboard, etc.
         echo "Login bem-sucedido!";
         $_SESSION['login'] = true;
+        $_SESSION['loginnow'] = true;
         $_SESSION['loginid'] = $row['id'];
         
-        echo "<script>window.location.href = '../dashboard.php';</script>";
+        echo "<script>window.location.href = '../index.php';</script>";
 
         exit(); // Interrompe a execução do PHP após o redirecionamento
     } else {
